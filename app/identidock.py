@@ -32,7 +32,7 @@ def mainpage():
   return header + body + footer
 
 
-@app.route('/monster/<name>')
+@app.route('/monster/<name>',  methods=['GET'])
 def get_identicon(name):
 
   image = cache.get(name)
